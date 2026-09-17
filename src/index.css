@@ -116,11 +116,19 @@ button { font-family: inherit; color: inherit; cursor: pointer; }
 .drawer .btn { margin-top: 12px; }
 @keyframes drop { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
 
-/* hero */
-.hero { position: relative; min-height: 92svh; display: flex; align-items: flex-end; color: #fff; overflow: hidden; }
-.hero img.bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 45%; }
-.hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10, 14, 24, .35) 0%, rgba(10, 14, 24, .15) 35%, rgba(10, 14, 24, .78) 100%); }
-.hero .wrap { position: relative; z-index: 1; padding-top: 120px; padding-bottom: 56px; }
+/* hero: deep blue field, copy left, the restaurant's own poster framed on the right */
+.hero {
+  position: relative; color: #fff; overflow: hidden;
+  background: #062B5C;
+  background-image: radial-gradient(900px 500px at 85% 10%, rgba(3, 78, 169, .8), transparent 60%), radial-gradient(700px 400px at 0% 100%, rgba(109, 194, 72, .18), transparent 60%);
+}
+.hero .wrap { position: relative; z-index: 1; padding-top: 96px; padding-bottom: 40px; display: grid; gap: 30px; align-items: center; }
+@media (min-width: 900px) { .hero .wrap { grid-template-columns: 6fr 5fr; gap: 56px; padding-top: 128px; padding-bottom: 72px; min-height: 92svh; } }
+.hero-art { position: relative; max-width: 560px; width: 100%; margin: 0 auto; }
+.hero-art .poster { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 22px; box-shadow: 0 30px 60px rgba(0, 0, 0, .45); position: relative; z-index: 1; }
+.hero-art .back { display: none; position: absolute; inset: 0; width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 22px; transform: rotate(-7deg) translate(-26px, 18px); opacity: .85; box-shadow: 0 20px 40px rgba(0, 0, 0, .35); }
+@media (min-width: 900px) { .hero-art .back { display: block; } }
+.hero-art .stamp { position: absolute; right: -6px; bottom: -14px; z-index: 2; background: var(--turmeric); color: #2A1B05; border-radius: 999px; padding: 10px 14px; font-weight: 700; font-size: 13px; box-shadow: 0 10px 24px rgba(0, 0, 0, .3); transform: rotate(-4deg); }
 .status { display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, .14); border: 1px solid rgba(255, 255, 255, .3); backdrop-filter: blur(6px); border-radius: 999px; padding: 6px 12px 6px 8px; font-size: 13.5px; font-weight: 600; margin-bottom: 18px; }
 .status .dot { width: 9px; height: 9px; border-radius: 99px; background: #7CE07A; box-shadow: 0 0 0 4px rgba(124, 224, 122, .25); }
 .status.closed .dot { background: #FFB3A7; box-shadow: 0 0 0 4px rgba(255, 179, 167, .25); }
@@ -166,7 +174,7 @@ button { font-family: inherit; color: inherit; cursor: pointer; }
 .story { display: grid; gap: 34px; align-items: center; }
 @media (min-width: 900px) { .story { grid-template-columns: 5fr 6fr; gap: 64px; } }
 .story .pic { position: relative; }
-.story .pic img { border-radius: var(--radius); aspect-ratio: 4 / 5; object-fit: cover; width: 100%; box-shadow: var(--shadow); }
+.story .pic img { border-radius: var(--radius); aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 12%; width: 100%; box-shadow: var(--shadow); }
 .story .pic::before { content: ''; position: absolute; inset: 14px -14px -14px 14px; border-radius: var(--radius); background: var(--turmeric-soft); z-index: -1; }
 .story .pic .tag { position: absolute; left: 16px; bottom: 16px; background: var(--paper); color: var(--ink); border-radius: 999px; padding: 8px 14px; font-size: 13.5px; font-weight: 600; box-shadow: var(--shadow); }
 .story p { color: var(--muted); margin: 0 0 16px; }
@@ -208,7 +216,7 @@ button { font-family: inherit; color: inherit; cursor: pointer; }
 @media (min-width: 640px) { .masonry { grid-template-columns: repeat(3, 1fr); gap: 14px; } }
 @media (min-width: 900px) { .masonry { grid-template-columns: repeat(4, 1fr); } }
 .shot { position: relative; border-radius: 14px; overflow: hidden; background: var(--paper-2); }
-.shot img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; transition: transform .6s ease; }
+.shot img { width: 100%; aspect-ratio: 1; object-fit: cover; transition: transform .6s ease; }
 @media (hover: hover) { .shot:hover img { transform: scale(1.04); } }
 .shot.reel img { aspect-ratio: 9 / 16; }
 .shot.reel .play { position: absolute; inset: 0; display: grid; place-items: center; background: linear-gradient(180deg, transparent 50%, rgba(10, 14, 24, .6)); color: #fff; border: none; padding: 0; width: 100%; }
@@ -280,7 +288,7 @@ button { font-family: inherit; color: inherit; cursor: pointer; }
 .actionbar svg { width: 18px; height: 18px; }
 @media (min-width: 900px) { .actionbar { display: none; } }
 
-/* reveal on scroll */
-.reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s cubic-bezier(.22, .61, .36, 1); }
-.reveal.in { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } .dish img, .shot img { transition: none; } }
+/* reveal on scroll — only hidden once JS is running, and JS un-hides everything within 2.5s regardless */
+.js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s cubic-bezier(.22, .61, .36, 1); }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .js .reveal { opacity: 1; transform: none; transition: none; } .dish img, .shot img { transition: none; } }

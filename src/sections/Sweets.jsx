@@ -7,7 +7,7 @@ export default function Sweets() {
       <div className="wrap">
         <div className="sweets">
           <div className="grid reveal">
-            {sweets.images.map((im) => <img key={im.src} src={im.src} alt={im.alt} loading="lazy" decoding="async" />)}
+            {sweets.images.map((im) => <img key={im.src} src={im.src} alt={im.alt} loading="lazy" decoding="async" style={im.pos ? { objectPosition: im.pos } : undefined} />)}
           </div>
           <div className="reveal">
             <p className="eyebrow">{sweets.eyebrow}</p>

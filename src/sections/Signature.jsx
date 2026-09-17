@@ -13,7 +13,7 @@ export default function Signature() {
           {signature.map((d) => (
             d.image ? (
               <article className="dish" key={d.name}>
-                <img src={d.image} alt={d.alt} loading="lazy" decoding="async" />
+                <img src={d.image} alt={d.alt} loading="lazy" decoding="async" style={d.pos ? { objectPosition: d.pos } : undefined} />
                 <div className="body">
                   <div className="ta" lang="ta">{d.ta}</div>
                   <h3>{d.name}</h3>

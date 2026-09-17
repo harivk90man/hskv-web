@@ -44,7 +44,9 @@ export const site = {
 
 export const hero = {
   image: '/gallery/dosa-kathirikai-kosthu.jpg',
-  imageAlt: 'A tall, crisp ghee roast dosa on a banana leaf with sambar, chutney and kathirikai kosthu',
+  imageAlt: 'Poster of a tall, crisp ghee roast dosa with sambar, coconut chutney and kathirikai kosthu',
+  image2: '/gallery/idli-varieties.jpg',
+  stamp: 'Pure veg · since the ’90s',
   title: ['Tiffin before darshan,', 'meals on a banana leaf,', 'filter coffee after.'],
   lede: 'Pure vegetarian restaurant and Sri Amirthas sweets counter on East Car Street, a hundred metres from the temple. Serving Chidambaram for more than thirty years.',
 }
@@ -61,17 +63,17 @@ export const signature = [
   {
     name: 'Ghee roast dosa', ta: 'நெய் ரோஸ்ட்',
     text: 'Paper-thin and crisp, with sambar, coconut chutney and our kathirikai kosthu.',
-    image: '/gallery/dosa-kathirikai-kosthu.jpg', alt: 'Ghee roast dosa with sambar, chutney and kathirikai kosthu',
+    image: '/gallery/dosa-kathirikai-kosthu.jpg', alt: 'Ghee roast dosa with sambar, chutney and kathirikai kosthu', pos: '50% 78%',
   },
   {
     name: 'Idli, three ways', ta: 'இட்லி வகைகள்',
     text: 'Soft idli plain, tossed in podi, or as sambar idli and chilli idli.',
-    image: '/gallery/idli-varieties.jpg', alt: 'Podi idli, sambar idli and chilli idli on banana leaves',
+    image: '/gallery/idli-varieties.jpg', alt: 'Podi idli, sambar idli and chilli idli on banana leaves', pos: '50% 62%',
   },
   {
     name: 'Banana-leaf meals', ta: 'இலை சாப்பாடு',
     text: 'Sambar, rasam, kootu, poriyal, appalam and pickle, served the traditional way at noon.',
-    image: '/gallery/banana-leaf-meals.jpg', alt: 'Meals being served on a banana leaf with several curries',
+    image: '/gallery/banana-leaf-meals.jpg', alt: 'Meals being served on a banana leaf with several curries', pos: '50% 12%',
   },
   { name: 'Ven pongal', ta: 'வெண் பொங்கல்', text: 'Peppery, ghee-rich pongal with a medu vada on the side. A temple-town breakfast.', glyph: '✦', tone: '' },
   { name: 'Filter coffee', ta: 'பில்டர் காபி', text: 'Strong decoction, hot milk, poured tall. The end of every visit.', glyph: '☕', tone: 'blue' },
@@ -154,22 +156,23 @@ export const sweets = {
     'Gift boxes are available for festivals, weddings and family occasions. Call ahead for large orders.',
   ],
   images: [
-    { src: '/gallery/amirthas-laddu.jpg', alt: 'A plate of laddus from Sri Amirthas on a banana leaf' },
-    { src: '/gallery/krishna-jayanthi-sweets.jpg', alt: 'A plate of assorted sweets for Krishna Jayanthi' },
-    { src: '/gallery/gokulashtami-gift-box.jpg', alt: 'Sri Amirthas gift box with laddu and mysore pak' },
+    { src: '/gallery/amirthas-laddu.jpg', alt: 'A plate of laddus from Sri Amirthas on a banana leaf', pos: '50% 68%' },
+    { src: '/gallery/krishna-jayanthi-sweets.jpg', alt: 'A plate of assorted sweets for Krishna Jayanthi', pos: '50% 68%' },
+    { src: '/gallery/gokulashtami-gift-box.jpg', alt: 'Sri Amirthas gift box with laddu and mysore pak', pos: '50% 62%' },
   ],
 }
 
 // Food only. Promo graphics and screenshots from Instagram stay out of the gallery.
+// Square tiles: the restaurant's square posters show whole; portrait ones get a focal point.
 export const gallery = [
   { src: '/gallery/dosa-kathirikai-kosthu.jpg', alt: 'A tall crisp dosa with sambar, coconut chutney and kathirikai kosthu' },
   { src: '/gallery/idli-varieties.jpg', alt: 'Podi idli, sambar idli and chilli idli on banana leaves' },
-  { src: '/gallery/banana-leaf-meals.jpg', alt: 'Meals being served on a banana leaf with several curries' },
+  { src: '/gallery/banana-leaf-meals.jpg', alt: 'Meals being served on a banana leaf with several curries', pos: '50% 12%' },
   { src: '/gallery/vinayagar-chaturthi-special.jpg', alt: 'Vinayagar Chaturthi special plate with kozhukattai and sundal' },
-  { src: '/gallery/krishna-jayanthi-sweets.jpg', alt: 'Assorted sweets for Krishna Jayanthi' },
-  { src: '/gallery/ganesha-kozhukattai.jpg', alt: 'Kozhukattai served on a plate' },
   { src: '/gallery/amirthas-laddu.jpg', alt: 'Laddus from Sri Amirthas on a banana leaf' },
-  { src: '/gallery/gokulashtami-gift-box.jpg', alt: 'Sri Amirthas sweets gift box' },
+  { src: '/gallery/krishna-jayanthi-sweets.jpg', alt: 'Assorted sweets for Krishna Jayanthi', pos: '50% 70%' },
+  { src: '/gallery/ganesha-kozhukattai.jpg', alt: 'Kozhukattai served on a plate' },
+  { src: '/gallery/gokulashtami-gift-box.jpg', alt: 'Sri Amirthas sweets gift box', pos: '50% 62%' },
 ]
 
 export const reels = [

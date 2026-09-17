@@ -41,7 +41,7 @@ export default function Gallery() {
         <div className="masonry reveal">
           {items.map((it) => it.kind === 'reel'
             ? <Reel key={'r' + it.code} r={it} />
-            : <figure className="shot" key={it.src}><img src={it.src} alt={it.alt} loading="lazy" decoding="async" /></figure>)}
+            : <figure className="shot" key={it.src}><img src={it.src} alt={it.alt} loading="lazy" decoding="async" style={it.pos ? { objectPosition: it.pos } : undefined} /></figure>)}
         </div>
         <div className="ig-foot reveal">
           <a className="btn soft" href={site.instagram} target="_blank" rel="noopener noreferrer"><Instagram />Follow {site.instagramHandle}</a>
