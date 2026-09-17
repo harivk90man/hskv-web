@@ -11,25 +11,22 @@ export default function Signature() {
         </div>
         <div className="dishes reveal">
           {signature.map((d) => (
-            d.image ? (
-              <article className="dish" key={d.name}>
-                <img src={d.image} alt={d.alt} loading="lazy" decoding="async" style={d.pos ? { objectPosition: d.pos } : undefined} />
-                <div className="body">
-                  <div className="ta" lang="ta">{d.ta}</div>
-                  <h3>{d.name}</h3>
-                  <p>{d.text}</p>
+            <article className="dish" key={d.name}>
+              {d.image ? (
+                <div className="media">
+                  <img src={d.image} alt={d.alt} loading="lazy" decoding="async" style={d.pos ? { objectPosition: d.pos } : undefined} />
                 </div>
-              </article>
-            ) : (
-              <article className={'dish text ' + (d.tone || '')} key={d.name}>
-                <div className="big" aria-hidden="true">{d.glyph}</div>
-                <div className="body">
-                  <div className="ta" lang="ta">{d.ta}</div>
-                  <h3>{d.name}</h3>
-                  <p>{d.text}</p>
+              ) : (
+                <div className={'media' + (d.tone ? ' ' + d.tone : '')}>
+                  <span className="big" aria-hidden="true">{d.glyph}</span>
                 </div>
-              </article>
-            )
+              )}
+              <div className="body">
+                <div className="ta" lang="ta">{d.ta}</div>
+                <h3>{d.name}</h3>
+                <p>{d.text}</p>
+              </div>
+            </article>
           ))}
         </div>
       </div>

@@ -63,19 +63,19 @@ export const signature = [
   {
     name: 'Ghee roast dosa', ta: 'நெய் ரோஸ்ட்',
     text: 'Paper-thin and crisp, with sambar, coconut chutney and our kathirikai kosthu.',
-    image: '/gallery/dosa-kathirikai-kosthu.jpg', alt: 'Ghee roast dosa with sambar, chutney and kathirikai kosthu', pos: '50% 78%',
+    image: '/gallery/dosa-kathirikai-kosthu.jpg', alt: 'Ghee roast dosa with sambar, chutney and kathirikai kosthu',
   },
   {
     name: 'Idli, three ways', ta: 'இட்லி வகைகள்',
     text: 'Soft idli plain, tossed in podi, or as sambar idli and chilli idli.',
-    image: '/gallery/idli-varieties.jpg', alt: 'Podi idli, sambar idli and chilli idli on banana leaves', pos: '50% 62%',
+    image: '/gallery/idli-varieties.jpg', alt: 'Podi idli, sambar idli and chilli idli on banana leaves',
   },
   {
     name: 'Banana-leaf meals', ta: 'இலை சாப்பாடு',
     text: 'Sambar, rasam, kootu, poriyal, appalam and pickle, served the traditional way at noon.',
     image: '/gallery/banana-leaf-meals.jpg', alt: 'Meals being served on a banana leaf with several curries', pos: '50% 12%',
   },
-  { name: 'Ven pongal', ta: 'வெண் பொங்கல்', text: 'Peppery, ghee-rich pongal with a medu vada on the side. A temple-town breakfast.', glyph: '✦', tone: '' },
+  { name: 'Ven pongal', ta: 'வெண் பொங்கல்', text: 'Peppery, ghee-rich pongal with a medu vada on the side. A temple-town breakfast.', glyph: '✦' },
   { name: 'Filter coffee', ta: 'பில்டர் காபி', text: 'Strong decoction, hot milk, poured tall. The end of every visit.', glyph: '☕', tone: 'blue' },
   { name: 'Rose milk', ta: 'ரோஸ் மில்க்', text: 'Chilled and pink, the drink reviewers keep coming back for on a hot Chidambaram afternoon.', glyph: '❀', tone: 'leaf' },
 ]
@@ -84,8 +84,8 @@ export const about = {
   eyebrow: 'Our story',
   title: 'A short walk from the temple, a long way from ordinary.',
   image: '/gallery/banana-leaf-meals.jpg',
-  imageAlt: 'A full meal being served on a banana leaf',
-  imageTag: 'Meals at noon, on the leaf',
+  imageAlt: 'Idlis, side dishes and a dosa being served on a banana leaf',
+  imageTag: 'On the leaf, the traditional way',
   paragraphs: [
     'Hotel Sri Krishna Vilas sits on East Car Street, a few steps from the eastern gopuram of the Thillai Nataraja Temple. For more than three decades, pilgrims, families and regulars have stopped here for a hot tiffin before darshan, a full banana-leaf meal at noon, and a tumbler of filter coffee or rose milk in the evening.',
     'Everything on the menu is pure vegetarian. The kitchen leans South Indian, with North Indian and Indo-Chinese dishes for those who want a change. Prices stay pocket-friendly, and the staff are known for looking after you.',
