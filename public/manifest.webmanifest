@@ -1,0 +1,14 @@
+{
+  "name": "Hotel Sri Krishna Vilas",
+  "short_name": "Sri Krishna Vilas",
+  "description": "Pure vegetarian restaurant and Sri Amirthas sweets, East Car Street, Chidambaram",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#FBF7EF",
+  "theme_color": "#034EA9",
+  "icons": [
+    { "src": "/logo-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/logo-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/logo-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
