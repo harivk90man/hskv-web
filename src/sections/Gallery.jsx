@@ -21,14 +21,13 @@ function Reel({ r }) {
 }
 
 export default function Gallery() {
-  // interleave: a reel after every three photos
+  // alternate reel, photo, reel, photo… so the tall reels spread across the grid
   const items = []
-  let ri = 0
-  gallery.forEach((g, i) => {
-    items.push({ kind: 'photo', ...g })
-    if ((i + 1) % 3 === 0 && ri < reels.length) items.push({ kind: 'reel', ...reels[ri++] })
-  })
-  while (ri < reels.length) items.push({ kind: 'reel', ...reels[ri++] })
+  const g = [...gallery], r = [...reels]
+  while (g.length || r.length) {
+    if (r.length) items.push({ kind: 'reel', ...r.shift() })
+    if (g.length) items.push({ kind: 'photo', ...g.shift() })
+  }
 
   return (
     <section className="section" id="gallery">

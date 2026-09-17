@@ -210,7 +210,7 @@ button { font-family: inherit; color: inherit; cursor: pointer; }
 .sweets .ctas { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
 
 /* gallery */
-.masonry { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.masonry { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; grid-auto-flow: dense; }
 @media (min-width: 640px) { .masonry { grid-template-columns: repeat(3, 1fr); gap: 14px; } }
 @media (min-width: 900px) { .masonry { grid-template-columns: repeat(4, 1fr); } }
 .shot { position: relative; border-radius: 14px; overflow: hidden; background: var(--paper-2); }

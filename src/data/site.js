@@ -157,28 +157,24 @@ export const sweets = {
   ],
   images: [
     { src: '/gallery/amirthas-laddu.jpg', alt: 'A plate of laddus from Sri Amirthas on a banana leaf', pos: '50% 68%' },
-    { src: '/gallery/krishna-jayanthi-sweets.jpg', alt: 'A plate of assorted sweets for Krishna Jayanthi', pos: '50% 68%' },
+    { src: '/gallery/vinayagar-chaturthi-special.jpg', alt: 'Vinayagar Chaturthi special: kozhukattai and sundal on a banana leaf', pos: '50% 80%' },
     { src: '/gallery/gokulashtami-gift-box.jpg', alt: 'Sri Amirthas gift box with laddu and mysore pak', pos: '50% 62%' },
   ],
 }
 
 // Food only. Promo graphics and screenshots from Instagram stay out of the gallery.
-// Square tiles: the restaurant's square posters show whole; portrait ones get a focal point.
+// Square tiles: the restaurant's square posters show whole. Photos used as reel posters are not
+// repeated as tiles, so nothing appears twice in the grid.
 export const gallery = [
-  { src: '/gallery/dosa-kathirikai-kosthu.jpg', alt: 'A tall crisp dosa with sambar, coconut chutney and kathirikai kosthu' },
   { src: '/gallery/idli-varieties.jpg', alt: 'Podi idli, sambar idli and chilli idli on banana leaves' },
-  { src: '/gallery/banana-leaf-meals.jpg', alt: 'Meals being served on a banana leaf with several curries', pos: '50% 12%' },
   { src: '/gallery/vinayagar-chaturthi-special.jpg', alt: 'Vinayagar Chaturthi special plate with kozhukattai and sundal' },
   { src: '/gallery/amirthas-laddu.jpg', alt: 'Laddus from Sri Amirthas on a banana leaf' },
-  { src: '/gallery/krishna-jayanthi-sweets.jpg', alt: 'Assorted sweets for Krishna Jayanthi', pos: '50% 70%' },
-  { src: '/gallery/ganesha-kozhukattai.jpg', alt: 'Kozhukattai served on a plate' },
-  { src: '/gallery/gokulashtami-gift-box.jpg', alt: 'Sri Amirthas sweets gift box', pos: '50% 62%' },
 ]
 
 export const reels = [
   { code: 'DdDpoY0j-Ri', title: 'Dosa, idli and kathirikai kosthu', poster: '/gallery/dosa-kathirikai-kosthu.jpg' },
   { code: 'DdQSEMoEYLf', title: 'One more curry, zero regrets', poster: '/gallery/banana-leaf-meals.jpg' },
-  { code: 'DdA7W8rCILx', title: 'Starts with freshness, ends with sweetness', poster: '/gallery/krishna-jayanthi-sweets.jpg' },
+  { code: 'DdA7W8rCILx', title: 'Starts with freshness, ends with sweetness', poster: '/gallery/gokulashtami-gift-box.jpg' },
   { code: 'DdQetQGjvLO', title: 'Vinayagar Chaturthi at Sri Krishna Vilas', poster: '/gallery/ganesha-kozhukattai.jpg' },
 ]
 
